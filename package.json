@@ -1,7 +1,7 @@
 {
-  "name": "fs-app-template",
+  "name": "elden-ring-build-helper",
   "version": "2.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "An app to assist in finding the right gear for you in Elden Ring",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
