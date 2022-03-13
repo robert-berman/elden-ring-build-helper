@@ -7,6 +7,9 @@ const Character = db.define('character', {
     primaryKey: true,
     autoIncrement: true,
   },
+  name: {
+    type: Sequelize.STRING,
+  },
   int: {
     type: Sequelize.INTEGER,
   },

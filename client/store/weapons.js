@@ -44,14 +44,20 @@ export const fetchSingleWeapon = (id) => {
 };
 //reducer
 
-let initialState = [];
+let initialState = {
+  weapons: [],
+  singleWeapon: {},
+};
 
 export default function weaponsReducer(state = initialState, action) {
+  let newState = state;
   switch (action.type) {
     case GET_WEAPONS:
-      return action.weapons;
+      newState.weapons = action.weapons;
+      return newState;
     case GET_WEAPON:
-      return action.weapon;
+      newState.singleWeapon = action.weapon;
+      return newState;
     default:
       return state;
   }

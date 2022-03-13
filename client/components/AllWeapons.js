@@ -6,10 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const AllWeapons = () => {
   const dispatch = useDispatch();
 
-  const weapons =
-    useSelector((state) => {
-      return state.weapons;
-    }) || [];
+  const weapons = useSelector((state) => state.weapons.weapons);
 
   useEffect(() => {
     dispatch(getWeapons());

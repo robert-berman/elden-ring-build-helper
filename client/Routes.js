@@ -6,6 +6,7 @@ import Home from './components/Home';
 import AllWeapons from './components/AllWeapons';
 import { me } from './store';
 import SingleWeapon from './components/SingleWeapon';
+import NewCharacter from './components/NewCharacter';
 
 /**
  * COMPONENT
@@ -26,6 +27,7 @@ const Routes = () => {
           <Route path="/home" component={Home} />
           <Route exact path="/weapons" component={AllWeapons} />
           <Route exact path="/weapons/:id" component={SingleWeapon} />
+          <Route exact path="/character/create" component={NewCharacter} />
         </Switch>
       ) : (
         <Switch>
@@ -34,8 +36,8 @@ const Routes = () => {
           </Route>
           <Route path="/login">{Login}</Route>
           <Route path="/signup">{Signup}</Route>
-          <Route exact path="/weapons" component={AllWeapons} />
           <Route path="/weapons/:id" component={SingleWeapon} />
+          <Route exact path="/weapons" component={AllWeapons} />
         </Switch>
       )}
     </div>
