@@ -7,17 +7,23 @@ const Weapons = db.define('weapons', {
     primaryKey: true,
     autoIncrement: true,
   },
+  name: {
+    type: Sequelize.STRING,
+  },
+  imageUrl: {
+    type: Sequelize.STRING,
+  },
   int: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
   },
   str: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
   },
   dex: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
   },
   fth: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
   },
 });
 
