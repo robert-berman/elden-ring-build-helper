@@ -2,20 +2,25 @@ import React, { useEffect, useState } from 'react';
 import { fetchSingleWeapon } from '../store/weapons';
 import { useDispatch, useSelector } from 'react-redux';
 import { me } from '../store';
+import { fetchSingleCharacter } from '../store/characters';
 
 const SingleWeapon = (props) => {
   const dispatch = useDispatch();
-  // const user = useSelector((state) => state.auth);
+  const user = useSelector((state) => state.auth);
 
   const weapon =
     useSelector((state) => {
-      return state.weapons;
+      return state.weapons.singleWeapon;
     }) || [];
+
+  const character = useSelector((state) => state.characters);
 
   useEffect(() => {
     dispatch(fetchSingleWeapon(props.match.params.id));
-  }, []);
+    dispatch(fetchSingleCharacter(user.id));
+  }, [user]);
 
+  console.log(character.str);
   return (
     <div
       id="item-stuff"
