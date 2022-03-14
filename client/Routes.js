@@ -7,6 +7,8 @@ import AllWeapons from './components/AllWeapons';
 import { me } from './store';
 import SingleWeapon from './components/SingleWeapon';
 import NewCharacter from './components/NewCharacter';
+import EditCharacter from './components/editCharacter';
+import ViewCharacter from './components/ViewCharacter';
 
 /**
  * COMPONENT
@@ -28,6 +30,7 @@ const Routes = () => {
           <Route exact path="/weapons" component={AllWeapons} />
           <Route exact path="/weapons/:id" component={SingleWeapon} />
           <Route exact path="/character/create" component={NewCharacter} />
+          <Route exact path="/character/" component={EditCharacter} />
         </Switch>
       ) : (
         <Switch>

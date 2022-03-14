@@ -28,6 +28,7 @@ const NewCharacter = (props) => {
     dispatch(
       postCharacter({
         userId: user.id,
+        name: name,
         int: int,
         str: str,
         dex: dex,
@@ -41,85 +42,99 @@ const NewCharacter = (props) => {
   };
 
   const handleStrChange = (event) => {
-    setStr(event.target.value);
+    setStr(event.target.value.replace(/[^0-9]+/g, ''));
   };
 
   const handleDexChange = (event) => {
-    setDex(event.target.value);
+    setDex(event.target.value.replace(/[^0-9]+/g, ''));
   };
 
   const handleIntChange = (event) => {
-    setInt(event.target.value);
+    setInt(event.target.value.replace(/[^0-9]+/g, ''));
   };
 
   const handleFthChange = (event) => {
-    setFth(event.target.value);
+    setFth(event.target.value.replace(/[^0-9]+/g, ''));
   };
   return (
-    <Paper
-      elevation={3}
-      style={{
-        display: 'flex',
-        justifyContent: 'flexStart',
-        height: '100vh',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
-    >
-      <form id="new-character-form" onSubmit={handleSubmit}>
+    <div style={{ height: '79vh' }}>
+      <Paper elevation={3} className={classes.paperStyles}>
         <div>
-          <TextField
-            type="text"
-            name="content"
-            label="name"
-            value={name}
-            onChange={handleNameChange}
-            className={classes.inputBox}
-          />
-          <TextField
-            type="text"
-            name="content"
-            label="strength"
-            value={str}
-            onChange={handleStrChange}
-            className={classes.inputBox}
-          />
-          <TextField
-            type="text"
-            name="content"
-            label="dexterity"
-            value={dex}
-            onChange={handleDexChange}
-            className={classes.inputBox}
-          />
-          <TextField
-            type="text"
-            name="content"
-            label="intellect"
-            value={int}
-            onChange={handleIntChange}
-            className={classes.inputBox}
-          />
-          <TextField
-            type="text"
-            name="content"
-            label="faith"
-            value={fth}
-            onChange={handleFthChange}
-            className={classes.inputBox}
-          />
-          <span>
-            <Button
-              variant="contained"
-              className="btn btn-default"
-              onClick={handleSubmit}
-            >
-              add your character!
-            </Button>
-          </span>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div id="label" style={{ marginRight: '30px' }}>
+              <h2>Name :</h2>
+            </div>
+            <TextField
+              type="text"
+              value={name}
+              onChange={handleNameChange}
+              className={classes.inputBox}
+            />
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div id="label" style={{ marginRight: '30px' }}>
+              <h3>Strength : </h3>
+            </div>
+            <TextField
+              type="text"
+              value={str}
+              onChange={handleStrChange}
+              className={classes.inputBox}
+            />
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div id="label" style={{ marginRight: '30px' }}>
+              <h3>Dexterity : </h3>
+            </div>
+            <TextField
+              type="text"
+              value={dex}
+              onChange={handleDexChange}
+              className={classes.inputBox}
+            />
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div id="label" style={{ marginRight: '30px' }}>
+              <h3>Intellect : </h3>
+            </div>
+            <TextField
+              type="text"
+              value={int}
+              onChange={handleIntChange}
+              className={classes.inputBox}
+            />
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div id="label" style={{ marginRight: '30px' }}>
+              <h3>Faith : </h3>
+            </div>
+            <TextField
+              type="text"
+              value={fth}
+              onChange={handleFthChange}
+              className={classes.inputBox}
+            />
+          </div>
         </div>
-      </form>
-    </Paper>
+      </Paper>
+      <div
+        style={{
+          display: 'flex',
+          width: '100vw',
+          justifyContent: 'center',
+          margin: '10px',
+        }}
+      >
+        <Button
+          variant="contained"
+          className="btn btn-default"
+          onClick={handleSubmit}
+          style={{ alignItems: 'center' }}
+        >
+          Submit Changes
+        </Button>
+      </div>
+    </div>
   );
 };
 

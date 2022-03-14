@@ -29,3 +29,13 @@ router.post('/', async (req, res, next) => {
     next(err);
   }
 });
+
+//editing a character by id
+router.put('/:id', async (req, res, next) => {
+  try {
+    const character = await Character.findByPk(req.body.id);
+    res.send(await character.update(req.body));
+  } catch (error) {
+    next(error);
+  }
+});

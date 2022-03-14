@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { act } from 'react-test-renderer';
 
 //action type
 
@@ -56,8 +57,7 @@ export default function weaponsReducer(state = initialState, action) {
       newState.weapons = action.weapons;
       return newState;
     case GET_WEAPON:
-      newState.singleWeapon = action.weapon;
-      return newState;
+      return { ...state, singleWeapon: action.weapon };
     default:
       return state;
   }
