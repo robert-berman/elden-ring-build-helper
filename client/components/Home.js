@@ -16,13 +16,18 @@ const Home = (props) => {
             <h1>Welcome, {username}</h1>
           </div>
           <div>
-            <h2>To get started, please create a character.</h2>
+            <h2>
+              To get started, click the Weapons tab to view information about
+              every weapon in Elden Ring.
+            </h2>
           </div>
           <div>
             <h2>
-              After you've done that, you can browse all weapons and compare
-              your character's stats to any weapon in Elden Ring. Feel free to
-              change your character's info at any time in the Character tab.{' '}
+              If you'd like to compare the weapons stats to your character's
+              stats, create an account using the Create a Character tab. After
+              you do so, you can browse all weapons and compare your character's
+              stats to any weapon in Elden Ring. Feel free to change your
+              character's info at any time in the Character tab.{' '}
             </h2>
           </div>
         </div>
