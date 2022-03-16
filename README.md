@@ -2,9 +2,11 @@
 
 Hi All! I made this app to help out the Elden Ring community in their process of finding the right weapon to progress through the game with. To use this, you'll have to sign up for an account first. Then, you can navigate to create a character where you can input your stats. Once you've completed those steps, navigate to the weapons view and select the weapon you'd like to compare your stats to! If your stats aren't compatible, you'll recieve information on what you need to add some points to.
 
-- start:dev will both start your server and build your client side files using webpack
+This app isn't currently deployed but will be in the near future.
+
+<!-- start:dev will both start your server and build your client side files using webpack -->
 - start:dev:logger is the same as start:dev, but you will see your SQL queries (can be helpful for debugging)
-- start:dev:seed will start your server and also seed your database (this is useful when you are making schema changes and you don't want to run your seed script separately)
+- start:dev:seed will start your server and also seed your database (this is useful when you are making schema changes and you don't want to run your seed script separately) -->
 
 <!-- ### Heroku
 
