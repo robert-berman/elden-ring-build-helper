@@ -4,7 +4,7 @@ const {
   db,
   models: { User },
 } = require("../server/db");
-const { getWeapons } = require("../server/Webscrape");
+const { getWeapons } = require("../server/webscrape");
 const filteredWeapons = [];
 const axios = require("axios");
 const cheerio = require("cheerio");
