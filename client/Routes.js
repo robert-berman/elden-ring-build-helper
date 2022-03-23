@@ -1,14 +1,14 @@
-import React, { Component, Fragment, useEffect } from 'react';
-import { connect, useSelector, useDispatch } from 'react-redux';
-import { withRouter, Route, Switch, Redirect } from 'react-router-dom';
-import { Login, Signup } from './components/AuthForm';
-import Home from './components/Home';
-import AllWeapons from './components/AllWeapons';
-import { me } from './store';
-import SingleWeapon from './components/SingleWeapon';
-import NewCharacter from './components/NewCharacter';
-import EditCharacter from './components/editCharacter';
-import ViewCharacter from './components/ViewCharacter';
+import React, { Component, Fragment, useEffect } from "react";
+import { connect, useSelector, useDispatch } from "react-redux";
+import { withRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Login, Signup } from "./components/AuthForm";
+import Home from "./components/Home";
+import AllWeapons from "./components/AllWeapons";
+import { me } from "./store";
+import SingleWeapon from "./components/SingleWeapon";
+import NewCharacter from "./components/NewCharacter";
+import EditCharacter from "./components/EditCharacter";
+import ViewCharacter from "./components/ViewCharacter";
 
 /**
  * COMPONENT
